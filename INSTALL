@@ -1,0 +1,22 @@
+Skripta za generiranje PNG-ja s seznamom upcoming eventov v Kiberpipi.
+Navodila za namestitev
+
+Skripta iz baze potegne seznam upcoming eventov in jih z uporabo priloženega
+fonta nariše na template.png .
+
+Distribuira se v svoji mapi, kot .tar.bz2 ali kot github url. To mapo
+položiš nekam pod spletni strežnik, in ta mapa se imenuje WEBROOT. Popravi
+nastavitev na začetku skripte na to mapo.
+
+Spripta je potem dosegljiva kot $WEBROOT/ozadje.sh .
+
+To moraš klicati iz cron-a, npr. na vsakih 10 minut:
+
+*/10 * * * * <$WEBROOT>/ozadje.sh
+
+
+In slika bo na voljo na naslovu:
+  http://yourserver/<webroot>/images/program.png
+
+
+

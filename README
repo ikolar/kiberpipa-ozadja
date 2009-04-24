@@ -1,0 +1,36 @@
+# ozadje.sh
+#
+# This script generates a PNG file of upcoming events in Kiberpipa
+# Modeled after rd666's original script, changelog:
+#  - migrated from mysql to postgres
+#  - minor cleanup
+#  - this header with documentation
+#
+# How it works is:
+# 1. it connects to the i3 database and retrieves all future public (!= 11) events
+# 2. takes the top 6 (head -6) of those
+# 3. checks the dates, and marks tuesdays' events as POTS, and wednesdays' as SUs
+# 4. writes that to a file named "text" (why, almir, why"
+# 5. loops through that file, and uses imagemagics's convert and composite to generate the png
+# 6. the png is left at a standard location, and is retrieved from there by the terminals
+# 7. run everything from cron
+#
+# Updates:
+#
+# Copyleft Apr 2009 Igor Kolar <ike@kiberpipa.org>
+
+
+Q&A:
+
+Q: Kako zamenjam ozadje?
+A: template.png 
+
+Q: Kako zamenjam font?
+A: Daj .ttf fajl
+
+Q: Kako poženem to zadevo s crona?
+
+1. Nastavi variablo 
+
+Q: Kako zavladam svetu?
+A: Čččččaj, saj ne morš (Edo Dečko, several times)
